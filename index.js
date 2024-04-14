@@ -45,7 +45,6 @@ function photoSearch() {
 }
 
 function uploadPhoto() {
-  var filePath = document.getElementById("file_input").value.split("\\");
   var customLabels = document.getElementById("custom_labels").value;
   var reader = new FileReader();
   var file = document.getElementById("file_input").files[0];
@@ -75,7 +74,7 @@ function photoUpload() {
     let inputData = document.getElementById("file_input").files[0];
     xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4) {
-        document.getElementById("uploadText").innerHTML =
+        document.getElementById("uploadSuccessText").innerHTML =
           "Uploaded, please wait a few seconds for it to be indexed.";
       }
     });

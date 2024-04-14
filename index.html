@@ -51,9 +51,9 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div>
       <h2>Search Photos</h2>
-      <form action="" , method="get" , target="" , id="search_photos">
+      <form>
         <input
           name="search_input"
           id="search_input"
@@ -61,16 +61,7 @@
           placeholder="Search Query"
         />
       </form>
-      <div class="row">
-        <button
-          type="button"
-          id="search_button"
-          style="width: 100px; height: 25px"
-          onclick="photoSearch()"
-        >
-          Search
-        </button>
-      </div>
+      <button type="button" onclick="photoSearch()">Search</button>
     </div>
 
     <div id="search_results"></div>
@@ -84,10 +75,15 @@
           name="custom_labels"
           placeholder="Custom labels"
         />
+        <label for="custom_labels"
+          ><i>(multiple labels must be separated with a comma)</i></label
+        >
       </form>
-      <p>keep muliple labels separated by comma (,)</p>
+      <br />
       <button onclick="photoUpload()">Upload Photo</button>
-      <div><p id="uploadText" style="display:hidden; font-size: 20px;"></p></div>
+      <div>
+        <p id="uploadSuccessText"></p>
+      </div>
     </div>
   </body>
 </html>
