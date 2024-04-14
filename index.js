@@ -34,7 +34,7 @@ function triggerSearch(searchText) {
     });
 }
 
-function photosearch() {
+function photoSearch() {
   var searchText = document.getElementById("search_input");
   if (!searchText.value) {
     alert("Search keywords are required.");
