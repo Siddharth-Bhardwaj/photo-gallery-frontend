@@ -1,4 +1,4 @@
-var sdk = sdkFactory.newClient({
+var sdk = apigClientFactory.newClient({
   apiKey: "beuV2SuzVr6ZqoI6VP0cA4ImJSVEXlEk6vlOtTcx",
 });
 
@@ -76,7 +76,7 @@ function photoUpload() {
     xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4) {
         document.getElementById("uploadText").innerHTML =
-          "Uploaded, please wait a few minutes for it to be indexed.";
+          "Uploaded, please wait a few seconds for it to be indexed.";
       }
     });
     xhr.open(
